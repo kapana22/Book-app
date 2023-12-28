@@ -1,0 +1,1001 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Web.CodeGenerators.Mvc</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Areas.AreaGenerator.EnsureFolderLayout(Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Areas.AreaGeneratorCommandLine)">
+            <summary>
+            Creates a folder hierarchy:
+                ProjectDir
+                   \ Areas
+                       \ AreaName
+                           \ Controllers
+                           \ Data
+                           \ Models
+                           \ Views
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Blazor.BlazorModel">
+            <summary>
+            Model for Razor templates to create or add to existing Endpoints file for the 'dotnet-aspnet-codegenerator minimalapi' scenario 
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Blazor.BlazorWebCRUDGenerator.GenerateCode(Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Blazor.BlazorWebCRUDGeneratorCommandLineModel)">
+            <summary>
+            Scaffold API Controller code into the provided (or created) Endpoints file. If no DbContext is provided, we will use the non-EF templates.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.CommonGeneratorBase">
+            <summary>
+            Common generator functionality for Controllers and Views
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.TemplateName">
+            <summary>
+            Name of the template file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.OutputPath">
+            <summary>
+            Path Relative to the .csproj file
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.AltPaths">
+            <summary>
+            A list of other paths to check for file existence - to avoid generating new versions of existing files when not appropriate).
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller.MvcController">
+            <summary>
+            MvcController class provides basic functionality for scaffolding an MVC controller.
+            The specific type of controller (Empty, Controller with read write actions etc, need to provide the template names to be used for scaffolding.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGenerator.EditProgramCsForIdentity(Microsoft.DotNet.Scaffolding.Shared.Project.IModelTypesLocator,System.String,System.String,System.String,Microsoft.DotNet.Scaffolding.Shared.DbProvider)">
+            <summary>
+            Edit the Program.cs file for Individual Auth. Adds GlobalStatements found in 'identityMinimalHostingChanges.json' file.
+            </summary>
+            <param name="modelTypesLocator">To find Program.cs model type and document for editing</param>
+            <param name="dbContextClassName">For injecting the DbContext class in statements.</param>
+            <param name="identityUserClassName">For injecting the IdentityUser class in statements.</param>
+            <param name="dbContextNamespace">For injecting the namespace for DbContext class in statements.</param>
+            <param name="databaseProvider">"Database type to use : DbProvider.SqlServer or DbProvider.SQLite"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGenerator.EnsureFolderLayout(System.String,Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorTemplateModel)">
+            <summary>
+            Creates a folder hierarchy:
+                ProjectDir
+                   \ Areas
+                       \ IdentityAreaName
+                           \ Data
+                           \ Pages
+                           \ Services
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorFilesConfig.GetViewImports(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorFile},Microsoft.DotNet.Scaffolding.Shared.IFileSystem,System.String)">
+            <summary>
+            Returns a list of ViewImport template files based on the files to generate and also on which _ViewImports already exist in the project.
+            We start from the innermost directory requested, if a _ViewImports file exists at this level, we are done.
+            If not, we add one to be generated and then look in the outer directory.
+            Sequence is:
+               - Account.Manage._ViewImports
+               - Account._ViewImports
+               - _ViewImports
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.AddedController">
+            <summary>
+              Looks up a localized string similar to Added Controller : &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.AddedEndpoints">
+            <summary>
+              Looks up a localized string similar to Added Endpoints : &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.AdditionalStepsRequired">
+            <summary>
+              Looks up a localized string similar to There are probably still some manual steps required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.CheckoutReadMe">
+            <summary>
+              Looks up a localized string similar to Checkout the &apos;{0}&apos; file that got generated..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.CompilationFailedMessage">
+            <summary>
+              Looks up a localized string similar to Failed to compile the project in memory{0}{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ControllerNameRequired">
+            <summary>
+              Looks up a localized string similar to Controller Name is required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DbContextNeedsToInheritFromIdentityContextMessage">
+            <summary>
+              Looks up a localized string similar to DbContext type &apos;{0}&apos; is found but it does not inherit from &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DbContextOptionDesc">
+            <summary>
+              Looks up a localized string similar to DbContext class to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DefaultLayoutSwitchDesc">
+            <summary>
+              Looks up a localized string similar to Switch to specify that default layout should be used for the views..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.EmptyControllerNameRequired">
+            <summary>
+              Looks up a localized string similar to Controller name is required for an Empty Controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ExistingDbContextCannotBeUsedForDefaultUI">
+            <summary>
+              Looks up a localized string similar to Cannot use an existing DbContext with the &apos;--useDefaultUI&apos; option..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.FileExists_useforce">
+            <summary>
+              Looks up a localized string similar to The file {0} exists, use -f option to overwrite.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ForceOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify whether to overwrite existing files..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.IdentityNotSupported">
+            <summary>
+              Looks up a localized string similar to Scaffolding Identity is not supported for web applications with minimal APIs for hosting and routing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallEfPackages">
+            <summary>
+              Looks up a localized string similar to To scaffold controllers and views using models, install Entity Framework core packages and try again: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallPackageMessage">
+            <summary>
+              Looks up a localized string similar to Install the following packages to your project:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallPackagesForScaffoldingIdentity">
+            <summary>
+              Looks up a localized string similar to Install the following packages to your project for scaffolding identity: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallSqlPackage">
+            <summary>
+              Looks up a localized string similar to To scaffold, install the following Entity Framework core packages and try again: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidBootstrapVersionForScaffolding">
+            <summary>
+              Looks up a localized string similar to The specified bootstrap version &apos;{0}&apos; is not valid. The valid options are &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidClassName">
+            <summary>
+              Looks up a localized string similar to The class name &apos;{0}&apos; is not valid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidDatabaseProvider">
+            <summary>
+              Looks up a localized string similar to Invalid database provider &apos;{0}&apos; found..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidDatabaseType">
+            <summary>
+              Looks up a localized string similar to Invalid database type &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidDbContextClassName">
+            <summary>
+              Looks up a localized string similar to Value of --dbContext &apos;{0}&apos; is not a valid class name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidFilesListMessage">
+            <summary>
+              Looks up a localized string similar to Could not find the files below. (Use &apos;--listFiles&apos; to check the list of available files).
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidNamespaceName">
+            <summary>
+              Looks up a localized string similar to The namespace name &apos;{0}&apos; is not valid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidOptionCombination">
+            <summary>
+              Looks up a localized string similar to Option &apos;{0}&apos; cannot be used with option &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidUserClassName">
+            <summary>
+              Looks up a localized string similar to Value of --userClass &apos;{0}&apos; is not a valid class name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidViewTemplateName">
+            <summary>
+              Looks up a localized string similar to The template name &apos;{0}&apos; is not valid. Supported view templates: &apos;Empty|Create|Edit|Delete|Details|List&apos;&quot;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.LayoutOptionsDesc">
+            <summary>
+              Looks up a localized string similar to Custom Layout page to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ModelClassOptionDesc">
+            <summary>
+              Looks up a localized string similar to Model class to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ModelClassRequiredForTemplate">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; template cannot be used without specifying a model class. Provide a model using &apos;--model&apos; option..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.MultipleTypesMatchingName">
+            <summary>
+              Looks up a localized string similar to Multiple types matching the name {0} exist:{1}, use a fully qualified name&quot;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.NamespaceOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify the name of the namespace to use for the generated controller..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.NoDbProviderFound">
+            <summary>
+              Looks up a localized string similar to No database provider found. Using &apos;SqlServer&apos; by default for new DbContext creation!.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.OutDirOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify the relative output folder path from project where the file needs to be generated, if not specified, file will be generated in the project folder..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.PageModelFlagNotSupported">
+            <summary>
+              Looks up a localized string similar to &apos;--noPageModel&apos; flag cannot be used for scaffolding model based Razor Pages..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ProvideValidArgument">
+            <summary>
+              Looks up a localized string similar to Provide a valid {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.RazorPageNameRequired">
+            <summary>
+              Looks up a localized string similar to Razor Page Name is required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ReadmeGenerationFailed">
+            <summary>
+              Looks up a localized string similar to Failed to generate a readme: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.Scaffolding_additionalSteps">
+            <summary>
+              Looks up a localized string similar to There may be additional steps required for the generated code to work. Refer to &lt;forward-link&gt;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ScaffoldingSuccessful_unregistered">
+            <summary>
+              Looks up a localized string similar to Scaffolding generated all the code but the new context created could not be registered using dependency injection..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ScriptsOptionDesc">
+            <summary>
+              Looks up a localized string similar to Switch to specify whether to reference script libraries in the generated views..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.SqliteObsoleteOption">
+            <summary>
+              Looks up a localized string similar to --useSqlite|-sqlite option is obsolete now. Use --databaseProvider|-dbProvider instead in the future..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.String1">
+            <summary>
+              Looks up a localized string similar to Failed to generate readme file at &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.TemplateNameRequired">
+            <summary>
+              Looks up a localized string similar to The TemplateName cannot be empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.TypeDoesNotExist">
+            <summary>
+              Looks up a localized string similar to A type with the name {0} does not exist.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UseForceOption">
+            <summary>
+              Looks up a localized string similar to The below files exist. Use &apos;--force&apos; to overwrite: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UserClassAndDbContextCannotBeSpecifiedTogether">
+            <summary>
+              Looks up a localized string similar to &apos;--userClass&apos; cannot be used to specify a user class when using an existing DbContext..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UserClassCouldNotBeDetermined">
+            <summary>
+              Looks up a localized string similar to Could not determine the user class from the DbContext class &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ValidationSuccessfull_modelUnset">
+            <summary>
+              Looks up a localized string similar to Validation succeded but model type not set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ViewNameRequired">
+            <summary>
+              Looks up a localized string similar to The ViewName cannot be empty..
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MinimalApi.MinimalApiGenerator.GenerateCode(Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MinimalApi.MinimalApiGeneratorCommandLineModel)">
+            <summary>
+            Scaffold API Controller code into the provided (or created) Endpoints file. If no DbContext is provided, we will use the non-EF templates.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MinimalApi.MinimalApiModel">
+            <summary>
+            Model for Razor templates to create or add to existing Endpoints file for the 'dotnet-aspnet-codegenerator minimalapi' scenario 
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.NameSpaceUtilities.GetSafeNamespaceName(System.String)">
+            <summary>
+            Converts a namespace name to a safe namespace name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.NameSpaceUtilities.GetSafeNamespaceFromPath(System.String,System.String)">
+            <summary>
+            Converts a path like a/b/c/d to namespace like a.b.c.d
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RoslynUtilities.CreateEscapedIdentifier(System.String)">
+            <summary>
+            Creates an escaped identifier if the identifier is a keyword (or contextual keyword) in C#.
+            </summary>
+            <param name="identifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View.EFModelBasedViewScaffolder.GenerateViews(System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View.ViewGeneratorModel,Microsoft.VisualStudio.Web.CodeGenerators.Mvc.ModelTypeAndContextModel,System.String)">
+            <summary>
+            Method exposed for adding multiple views in one operation.
+            Utilised by the ControllerWithContextGenerator which generates 5 views for a MVC controller with context.
+            </summary>
+            <param name="viewsAndTemplates">Names of views and the corresponding template names</param>
+            <param name="viewGeneratorModel">Model for View Generator</param>
+            <param name="modelTypeAndContextModel">Model Type and DbContext metadata</param>
+            <param name="baseOutputPath">Folder where all views will be generated</param>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Delete">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Delete.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Delete.Host">
+            <summary>
+            The current host for the text templating engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Delete.Model">
+            <summary>
+            Access the Model parameter of the template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Delete.Initialize">
+            <summary>
+            Initialize the template
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Details">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Details.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Details.Host">
+            <summary>
+            The current host for the text templating engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Details.Model">
+            <summary>
+            Access the Model parameter of the template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Details.Initialize">
+            <summary>
+            Initialize the template
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Edit">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Edit.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Edit.Host">
+            <summary>
+            The current host for the text templating engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Edit.Model">
+            <summary>
+            Access the Model parameter of the template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Edit.Initialize">
+            <summary>
+            Initialize the template
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Index">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Index.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Index.Host">
+            <summary>
+            The current host for the text templating engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Index.Model">
+            <summary>
+            Access the Model parameter of the template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Index.Initialize">
+            <summary>
+            Initialize the template
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Create">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Create.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Create.Host">
+            <summary>
+            The current host for the text templating engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Create.Model">
+            <summary>
+            Access the Model parameter of the template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.Create.Initialize">
+            <summary>
+            Initialize the template
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.CreateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DeleteBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.DetailsBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.EditBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor.IndexBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+    </members>
+</doc>

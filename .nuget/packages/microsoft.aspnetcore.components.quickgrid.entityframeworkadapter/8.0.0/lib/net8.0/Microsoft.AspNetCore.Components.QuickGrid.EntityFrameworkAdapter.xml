@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Extensions.DependencyInjection.EntityFrameworkAdapterServiceCollectionExtensions">
+            <summary>
+            Provides extension methods to configure <see cref="T:Microsoft.AspNetCore.Components.QuickGrid.IAsyncQueryExecutor"/> on a <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.EntityFrameworkAdapterServiceCollectionExtensions.AddQuickGridEntityFrameworkAdapter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers an Entity Framework aware implementation of <see cref="T:Microsoft.AspNetCore.Components.QuickGrid.IAsyncQueryExecutor"/>.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+        </member>
+    </members>
+</doc>
